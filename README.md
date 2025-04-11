@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Insomnia Clicker - интерактивная игра для заработка виртуальной валюты">
+    <title>Insomnia Clicker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6e45e2;
+            --secondary-color: #88d3ce;
+            --dark-bg: #1a1a2e;
+            --darker-bg: #0f3460;
+            --header-bg: rgba(22, 33, 62, 0.8);
+            --text-color: #fff;
+            --premium-color: gold;
+            --success-color: #4CAF50;
+            --error-color: #f44336;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
