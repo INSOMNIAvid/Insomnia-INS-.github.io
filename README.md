@@ -809,10 +809,10 @@
     <!-- Нижнее меню -->
     <div class="bottom-nav">
         <div class="nav-tab active" data-tab="click-tab" role="button" data-i18n="clickerTab">Кликер</div>
+        <div class="nav-tab" data-tab="quests-tab" role="button" data-i18n="questsTab">Задания</div>
         <div class="nav-tab" data-tab="friends-tab" role="button" data-i18n="friendsTab">Друзья</div>
         <div class="nav-tab" data-tab="wallet-tab" role="button" data-i18n="walletTab">Кошелёк</div>
-        <div class="nav-tab" data-tab="quests-tab" role="button" data-i18n="questsTab">Задания</div>
-    </div>
+   </div>
 
     <!-- Модальное окно премиума -->
     <div id="premium-modal" role="dialog" aria-modal="true" aria-labelledby="premium-modal-title">
