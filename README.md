@@ -42,34 +42,40 @@
         }
 
         .header {
-            padding: 20px;
+            padding: 15px;
             background: var(--header-bg);
             position: relative;
             backdrop-filter: blur(5px);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            flex: 1;
+            text-align: center;
         }
 
         .header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
         }
 
         .settings-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             background: transparent;
             border: none;
             color: white;
-            font-size: 24px;
+            font-size: 20px;
             cursor: pointer;
             transition: transform 0.3s;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
+            margin-left: auto;
         }
 
         .settings-btn:hover {
@@ -80,15 +86,15 @@
         .settings-menu {
             display: none;
             position: absolute;
-            top: 60px;
-            right: 20px;
+            top: 50px;
+            right: 15px;
             background: var(--darker-bg);
-            padding: 15px;
+            padding: 12px;
             border-radius: 10px;
             z-index: 10;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             text-align: left;
-            min-width: 150px;
+            min-width: 140px;
         }
 
         .settings-menu.active {
@@ -97,13 +103,14 @@
         }
 
         .settings-menu-item {
-            padding: 8px 12px;
+            padding: 8px 10px;
             cursor: pointer;
             border-radius: 5px;
             transition: background 0.2s;
             margin: 3px 0;
             display: flex;
             align-items: center;
+            font-size: 14px;
         }
 
         .settings-menu-item:hover {
@@ -120,12 +127,12 @@
             top: 0;
             right: 100%;
             background: var(--darker-bg);
-            padding: 15px;
+            padding: 12px;
             border-radius: 10px;
             z-index: 10;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             text-align: left;
-            min-width: 150px;
+            min-width: 140px;
         }
 
         .language-menu.active {
@@ -134,11 +141,12 @@
         }
 
         .language-option {
-            padding: 8px 12px;
+            padding: 8px 10px;
             cursor: pointer;
             border-radius: 5px;
             transition: background 0.2s;
             margin: 3px 0;
+            font-size: 14px;
         }
 
         .language-option:hover {
@@ -147,7 +155,7 @@
 
         .main-content {
             flex: 1;
-            padding: 20px;
+            padding: 15px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
@@ -155,16 +163,16 @@
         }
 
         #click-area {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            margin: 20px auto;
+            margin: 15px auto;
             cursor: pointer;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             color: white;
             user-select: none;
@@ -180,8 +188,8 @@
 
         .progress-container {
             width: 100%;
-            max-width: 300px;
-            margin: 0 auto 20px;
+            max-width: 280px;
+            margin: 0 auto 15px;
             background: var(--darker-bg);
             border-radius: 10px;
             padding: 3px;
@@ -189,7 +197,7 @@
         }
 
         .progress-bar {
-            height: 20px;
+            height: 18px;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             border-radius: 8px;
             width: 100%;
@@ -215,16 +223,16 @@
         }
 
         #clicks-left {
-            margin-top: 8px;
+            margin-top: 6px;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         #regen-info {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--secondary-color);
             margin-top: 5px;
-            min-height: 20px;
+            min-height: 18px;
         }
 
         .bottom-nav {
@@ -237,11 +245,12 @@
 
         .nav-tab {
             flex: 1;
-            padding: 15px;
+            padding: 12px 8px;
             cursor: pointer;
             transition: background 0.3s, color 0.3s;
             font-weight: 600;
             position: relative;
+            font-size: 14px;
         }
 
         .nav-tab:hover {
@@ -267,9 +276,9 @@
 
         .tab-content {
             display: none;
-            padding: 15px;
+            padding: 12px;
             width: 100%;
-            max-width: 500px;
+            max-width: 100%;
             animation: fadeIn 0.5s ease-out;
         }
 
@@ -281,11 +290,11 @@
             background: var(--primary-color);
             color: white;
             border: none;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 30px;
             cursor: pointer;
-            font-size: 16px;
-            margin: 8px;
+            font-size: 15px;
+            margin: 6px;
             transition: all 0.3s;
             font-weight: 600;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -299,6 +308,12 @@
         button:active {
             transform: translateY(0);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .premium-btn {
+            background: gold;
+            color: black;
+            font-weight: bold;
         }
 
         #premium-modal {
@@ -318,10 +333,10 @@
 
         .premium-options {
             background: var(--darker-bg);
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             width: 90%;
-            max-width: 450px;
+            max-width: 100%;
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             max-height: 90vh;
@@ -329,20 +344,22 @@
         }
 
         .premium-options h2 {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: var(--premium-color);
+            font-size: 1.3rem;
         }
 
         .premium-options h3 {
-            margin: 15px 0 10px;
+            margin: 12px 0 8px;
             color: var(--secondary-color);
+            font-size: 1.1rem;
         }
 
         .color-option {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             display: inline-block;
-            margin: 5px;
+            margin: 4px;
             border-radius: 50%;
             cursor: pointer;
             border: 2px solid transparent;
@@ -359,13 +376,14 @@
         }
 
         .premium-feature {
-            margin: 12px 0;
+            margin: 10px 0;
             text-align: left;
-            padding: 8px 12px;
+            padding: 8px 10px;
             background: rgba(110, 69, 226, 0.1);
             border-radius: 8px;
             display: flex;
             align-items: center;
+            font-size: 14px;
         }
 
         .premium-feature::before {
@@ -378,10 +396,10 @@
         .premium-badge {
             background: var(--premium-color);
             color: black;
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 15px;
-            font-size: 12px;
-            margin-left: 8px;
+            font-size: 11px;
+            margin-left: 6px;
             font-weight: bold;
             display: inline-block;
             transform: translateY(-3px);
@@ -389,15 +407,16 @@
 
         .wallet-option {
             background: rgba(15, 52, 96, 0.7);
-            padding: 15px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 8px 0;
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
+            font-size: 14px;
         }
 
         .wallet-option:hover {
@@ -407,15 +426,15 @@
         }
 
         #time-left {
-            margin-top: 10px;
-            font-size: 14px;
+            margin-top: 8px;
+            font-size: 13px;
             color: var(--premium-color);
             font-weight: 600;
         }
 
         .emoji-effect {
             position: absolute;
-            font-size: 24px;
+            font-size: 22px;
             animation: float-up 1s forwards;
             opacity: 0.8;
             filter: brightness(0.7);
@@ -425,13 +444,14 @@
 
         .ref-link-container {
             background: rgba(13, 115, 119, 0.7);
-            padding: 12px;
+            padding: 10px;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
-            margin: 15px 0;
+            margin: 12px 0;
             position: relative;
             overflow: hidden;
+            font-size: 14px;
         }
 
         .ref-link-container:hover {
@@ -461,29 +481,34 @@
 
         .wallet-info {
             background: rgba(15, 52, 96, 0.7);
-            padding: 15px;
+            padding: 12px;
             border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 15px;
             text-align: left;
+            font-size: 14px;
         }
 
         .wallet-info p {
-            margin: 8px 0;
+            margin: 6px 0;
         }
 
         .toast {
             position: fixed;
-            bottom: 20px;
+            bottom: 15px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(0, 0, 0, 0.8);
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 30px;
             z-index: 1000;
             display: none;
             animation: fadeIn 0.3s, fadeOut 0.3s 2.7s forwards;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+            max-width: 90%;
+            white-space: pre-line;
+            text-align: center;
         }
 
         /* Модальное окно конфиденциальности */
@@ -503,56 +528,108 @@
 
         .privacy-content {
             background: var(--darker-bg);
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             width: 90%;
-            max-width: 600px;
+            max-width: 100%;
             max-height: 80vh;
             overflow-y: auto;
             text-align: left;
+            font-size: 14px;
         }
 
         .privacy-content h2 {
             color: var(--secondary-color);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-align: center;
+            font-size: 1.3rem;
         }
 
         .privacy-content h3 {
             color: var(--secondary-color);
-            margin: 15px 0 10px;
+            margin: 12px 0 8px;
+            font-size: 1.1rem;
         }
 
         .privacy-content p {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .privacy-content ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
+            margin-left: 18px;
+            margin-bottom: 12px;
         }
 
         .close-privacy {
             background: var(--primary-color);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 30px;
             cursor: pointer;
-            margin-top: 15px;
+            margin-top: 12px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            font-size: 14px;
         }
 
         /* Стили для адреса кошелька */
         .wallet-address {
             background: rgba(110, 69, 226, 0.2);
-            padding: 10px;
+            padding: 8px;
             border-radius: 5px;
-            margin: 15px 0;
+            margin: 12px 0;
             word-break: break-all;
             font-family: monospace;
+            font-size: 13px;
+        }
+
+        /* Стили для заданий */
+        .quest-item {
+            background: rgba(15, 52, 96, 0.7);
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quest-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .quest-description {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .quest-reward {
+            background: gold;
+            color: black;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+
+        .quest-completed {
+            background: rgba(76, 175, 80, 0.3);
+            border: 1px solid rgba(76, 175, 80, 0.5);
+        }
+
+        .quest-completed .quest-title {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .quest-completed .quest-reward {
+            background: rgba(76, 175, 80, 0.5);
         }
 
         @keyframes fadeIn {
@@ -571,7 +648,7 @@
                 opacity: 0.8;
             }
             100% {
-                transform: translateY(-100px);
+                transform: translateY(-80px);
                 opacity: 0;
             }
         }
@@ -584,13 +661,13 @@
         /* Анимация появления монет */
         @keyframes coinBounce {
             0% { transform: translateY(0) scale(1); opacity: 1; }
-            50% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
-            100% { transform: translateY(-40px) scale(0.5); opacity: 0; }
+            50% { transform: translateY(-15px) scale(1.2); opacity: 0.8; }
+            100% { transform: translateY(-30px) scale(0.5); opacity: 0; }
         }
 
         .coin-effect {
             position: absolute;
-            font-size: 20px;
+            font-size: 18px;
             animation: coinBounce 1s forwards;
             pointer-events: none;
             z-index: 5;
@@ -598,42 +675,39 @@
             font-weight: bold;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 350px) {
             .header h1 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
             
             #click-area {
-                width: 180px;
-                height: 180px;
-                font-size: 20px;
+                width: 160px;
+                height: 160px;
+                font-size: 18px;
             }
             
             .nav-tab {
-                padding: 12px 8px;
-                font-size: 14px;
+                padding: 10px 6px;
+                font-size: 12px;
             }
             
             .premium-options {
-                padding: 15px;
+                padding: 12px;
             }
             
             .privacy-content {
-                padding: 15px;
-            }
-            
-            .language-menu {
-                right: auto;
-                left: 0;
+                padding: 12px;
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1 data-i18n="title">Insomnia Clicker <span id="premium-badge" class="premium-badge" style="display:none;" data-i18n="premiumBadge">PREMIUM</span></h1>
-        <p data-i18n="balance">Баланс: <span id="balance">0</span> $INSOMNIA</p>
-        <div id="time-left" style="display:none;"></div>
+        <div class="header-content">
+            <h1 data-i18n="title">Insomnia Clicker <span id="premium-badge" class="premium-badge" style="display:none;" data-i18n="premiumBadge">PREMIUM</span></h1>
+            <p data-i18n="balance">Баланс: <span id="balance">0</span> $INSOMNIA</p>
+            <div id="time-left" style="display:none;"></div>
+        </div>
         
         <button class="settings-btn" id="settings-btn" aria-label="Настройки">⚙️</button>
         <div class="settings-menu" id="settings-menu">
@@ -685,20 +759,49 @@
         <div id="wallet-tab" class="tab-content">
             <h3 data-i18n="walletTitle">Подключение кошелька</h3>
             <div class="wallet-option" id="metamask-connect">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" width="30" alt="MetaMask">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" width="25" alt="MetaMask">
                 MetaMask
             </div>
             <div class="wallet-option" id="walletconnect-connect">
-                <img src="https://walletconnect.com/walletconnect-logo.png" width="30" alt="WalletConnect">
+                <img src="https://walletconnect.com/walletconnect-logo.png" width="25" alt="WalletConnect">
                 WalletConnect
             </div>
             <div class="wallet-option" id="phantom-connect">
-                <img src="https://phantom.app/favicon.ico" width="30" alt="Phantom">
+                <img src="https://phantom.app/favicon.ico" width="25" alt="Phantom">
                 Phantom (Solana)
             </div>
             <div id="wallet-info" class="wallet-info" style="display:none;">
                 <p><span data-i18n="connected">Подключен</span>: <span id="wallet-address">0x...0000</span></p>
                 <p><span data-i18n="network">Сеть</span>: <span id="wallet-network">-</span></p>
+            </div>
+        </div>
+
+        <!-- Задания -->
+        <div id="quests-tab" class="tab-content">
+            <h3 data-i18n="questsTitle">Задания</h3>
+            
+            <div class="quest-item" id="telegram-quest">
+                <div>
+                    <div class="quest-title">Подпишись на Telegram канал</div>
+                    <div class="quest-description">Подпишись на наш канал и получи 500 $INSOMNIA</div>
+                </div>
+                <div class="quest-reward">+500 $INSOMNIA</div>
+            </div>
+            
+            <div class="quest-item" id="click-quest">
+                <div>
+                    <div class="quest-title">Сделай 100 кликов</div>
+                    <div class="quest-description">Кликни 100 раз и получи 200 $INSOMNIA</div>
+                </div>
+                <div class="quest-reward">+200 $INSOMNIA</div>
+            </div>
+            
+            <div class="quest-item" id="premium-quest">
+                <div>
+                    <div class="quest-title">Активируй PREMIUM</div>
+                    <div class="quest-description">Активируй PREMIUM подписку и получи 1000 $INSOMNIA</div>
+                </div>
+                <div class="quest-reward">+1000 $INSOMNIA</div>
             </div>
         </div>
     </div>
@@ -708,13 +811,14 @@
         <div class="nav-tab active" data-tab="click-tab" role="button" data-i18n="clickerTab">Кликер</div>
         <div class="nav-tab" data-tab="friends-tab" role="button" data-i18n="friendsTab">Друзья</div>
         <div class="nav-tab" data-tab="wallet-tab" role="button" data-i18n="walletTab">Кошелёк</div>
+        <div class="nav-tab" data-tab="quests-tab" role="button" data-i18n="questsTab">Задания</div>
     </div>
 
     <!-- Модальное окно премиума -->
     <div id="premium-modal" role="dialog" aria-modal="true" aria-labelledby="premium-modal-title">
         <div class="premium-options">
             <h2 id="premium-modal-title" data-i18n="premiumTitle">PREMIUM подписка</h2>
-            <div id="premium-time-info" style="margin-bottom:15px;"></div>
+            <div id="premium-time-info" style="margin-bottom:12px;"></div>
             
             <div class="premium-feature" data-i18n="premiumFeature1">2X монет за клики</div>
             <div class="premium-feature" data-i18n="premiumFeature2">2X монет за рефералов</div>
@@ -747,15 +851,33 @@
                 <div class="color-option" style="background: linear-gradient(90deg, #11998e, #38ef7d);" data-progress1="#11998e" data-progress2="#38ef7d" aria-label="Зелено-бирюзовый градиент"></div>
             </div>
             
-            <div class="wallet-address" data-i18n="paymentWallet">
-                Для оплаты отправьте 4.99 USDT на адрес:<br>
-                UQA6AB1e1jlNtn9SzVyNThIjJqBhnUz_O5dZcMNHTDV2L6US
+            <div id="payment-options">
+                <h3 data-i18n="paymentMethods">Способы оплаты:</h3>
+                <button id="pay-crypto" class="wallet-option" style="margin: 10px 0;">
+                    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="25" alt="Crypto">
+                    Оплатить криптовалютой
+                </button>
+                <button id="pay-card" class="wallet-option" style="margin: 10px 0;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" width="25" alt="Card">
+                    Оплатить картой
+                </button>
             </div>
             
-            <button id="confirm-premium" style="margin-top:20px;background:gold;color:black;font-weight:bold;" data-i18n="confirmPayment">
-                Я оплатил
-            </button>
-            <button id="close-premium-modal" style="margin-top:10px;" data-i18n="close">
+            <div id="crypto-payment" style="display: none;">
+                <div class="wallet-address" data-i18n="paymentWallet">
+                    Для оплаты отправьте 4.99 USDT на адрес:<br>
+                    <span id="crypto-address">UQA6AB1e1jlNtn9SzVyNThIjJqBhnUz_O5dZcMNHTDV2L6US</span>
+                </div>
+                <button id="check-payment" style="margin-top:15px;" data-i18n="checkPayment">
+                    Проверить оплату
+                </button>
+            </div>
+            
+            <div id="card-payment" style="display: none;">
+                <iframe id="payment-frame" src="about:blank" style="width: 100%; height: 300px; border: none; border-radius: 10px;"></iframe>
+            </div>
+            
+            <button id="close-premium-modal" style="margin-top:8px;" data-i18n="close">
                 Закрыть
             </button>
         </div>
@@ -828,7 +950,10 @@
             clickRefreshInterval: null,
             lastClickTime: 0,
             CLICK_COOLDOWN: 100, // Задержка между кликами в мс
-            currentLanguage: localStorage.getItem('language') || 'ru'
+            currentLanguage: localStorage.getItem('language') || 'ru',
+            totalClicks: parseInt(localStorage.getItem('totalClicks')) || 0,
+            completedQuests: JSON.parse(localStorage.getItem('completedQuests')) || [],
+            paymentStatus: localStorage.getItem('paymentStatus') || 'not_started'
         };
 
         // Локализация
@@ -853,6 +978,7 @@
                 clickerTab: "Кликер",
                 friendsTab: "Друзья",
                 walletTab: "Кошелёк",
+                questsTab: "Задания",
                 premiumTitle: "PREMIUM подписка",
                 premiumFeature1: "2X монет за клики",
                 premiumFeature2: "2X монет за рефералов",
@@ -914,7 +1040,22 @@
                 nextIn: "следующий +1 через",
                 seconds: "сек",
                 regenReady: "Готово! Максимум кликов",
-                unlimitedClicksPremium: "Безлимитные клики (PREMIUM)"
+                unlimitedClicksPremium: "Безлимитные клики (PREMIUM)",
+                paymentMethods: "Способы оплаты:",
+                checkPayment: "Проверить оплату",
+                paymentSuccess: "Оплата подтверждена! PREMIUM активирован!",
+                paymentPending: "Оплата еще не подтверждена. Попробуйте позже.",
+                paymentFailed: "Оплата не найдена. Пожалуйста, попробуйте еще раз.",
+                questsTitle: "Задания",
+                telegramQuestTitle: "Подпишись на Telegram канал",
+                telegramQuestDesc: "Подпишись на наш канал и получи 500 $INSOMNIA",
+                clickQuestTitle: "Сделай 100 кликов",
+                clickQuestDesc: "Кликни 100 раз и получи 200 $INSOMNIA",
+                premiumQuestTitle: "Активируй PREMIUM",
+                premiumQuestDesc: "Активируй PREMIUM подписку и получи 1000 $INSOMNIA",
+                questCompleted: "Задание выполнено! +",
+                subscribeTelegram: "Подписаться на канал",
+                telegramSubscribed: "Спасибо за подписку! Награда зачислена."
             },
             en: {
                 title: "Insomnia Clicker",
@@ -936,6 +1077,7 @@
                 clickerTab: "Clicker",
                 friendsTab: "Friends",
                 walletTab: "Wallet",
+                questsTab: "Quests",
                 premiumTitle: "PREMIUM subscription",
                 premiumFeature1: "2X coins per click",
                 premiumFeature2: "2X coins for referrals",
@@ -997,7 +1139,22 @@
                 nextIn: "next +1 in",
                 seconds: "sec",
                 regenReady: "Ready! Maximum clicks",
-                unlimitedClicksPremium: "Unlimited clicks (PREMIUM)"
+                unlimitedClicksPremium: "Unlimited clicks (PREMIUM)",
+                paymentMethods: "Payment methods:",
+                checkPayment: "Check payment",
+                paymentSuccess: "Payment confirmed! PREMIUM activated!",
+                paymentPending: "Payment not confirmed yet. Please try again later.",
+                paymentFailed: "Payment not found. Please try again.",
+                questsTitle: "Quests",
+                telegramQuestTitle: "Subscribe to Telegram channel",
+                telegramQuestDesc: "Subscribe to our channel and get 500 $INSOMNIA",
+                clickQuestTitle: "Make 100 clicks",
+                clickQuestDesc: "Click 100 times and get 200 $INSOMNIA",
+                premiumQuestTitle: "Activate PREMIUM",
+                premiumQuestDesc: "Activate PREMIUM subscription and get 1000 $INSOMNIA",
+                questCompleted: "Quest completed! +",
+                subscribeTelegram: "Subscribe to channel",
+                telegramSubscribed: "Thanks for subscribing! Reward credited."
             }
         };
 
@@ -1034,7 +1191,18 @@
             supportBtn: document.getElementById('support-btn'),
             privacyModal: document.getElementById('privacy-modal'),
             closePrivacy: document.getElementById('close-privacy'),
-            toast: document.getElementById('toast')
+            toast: document.getElementById('toast'),
+            telegramQuest: document.getElementById('telegram-quest'),
+            clickQuest: document.getElementById('click-quest'),
+            premiumQuest: document.getElementById('premium-quest'),
+            payCrypto: document.getElementById('pay-crypto'),
+            payCard: document.getElementById('pay-card'),
+            cryptoPayment: document.getElementById('crypto-payment'),
+            cardPayment: document.getElementById('card-payment'),
+            paymentOptions: document.getElementById('payment-options'),
+            checkPayment: document.getElementById('check-payment'),
+            paymentFrame: document.getElementById('payment-frame'),
+            cryptoAddress: document.getElementById('crypto-address')
         };
 
         // Вспомогательные функции
@@ -1129,7 +1297,11 @@
             // Для кнопки премиума с особым текстом
             if (gameState.premiumActive) {
                 elements.buyPremiumBtn.textContent = translations[lang]['premiumActive'];
+                elements.buyPremiumBtn.classList.add('premium-btn');
                 elements.refBonusText.textContent = translations[lang]['refBonusTextPremium'];
+            } else {
+                elements.buyPremiumBtn.textContent = translations[lang]['buyPremium'];
+                elements.buyPremiumBtn.classList.remove('premium-btn');
             }
         }
 
@@ -1153,8 +1325,7 @@
             elements.premiumBadge.style.display = "inline";
             elements.refBonusText.textContent = translations[gameState.currentLanguage]['refBonusTextPremium'];
             elements.buyPremiumBtn.textContent = translations[gameState.currentLanguage]['premiumActive'];
-            elements.buyPremiumBtn.style.background = "gold";
-            elements.buyPremiumBtn.style.color = "black";
+            elements.buyPremiumBtn.classList.add('premium-btn');
             elements.timeLeft.style.display = "block";
             elements.regenInfo.textContent = translations[gameState.currentLanguage]['unlimitedClicks'];
             
@@ -1166,6 +1337,9 @@
             applySavedColors();
             
             showToast(translations[gameState.currentLanguage]['premiumActivated']);
+            
+            // Проверяем задание на премиум
+            checkPremiumQuest();
         }
 
         // Таймер обратного отсчета
@@ -1183,8 +1357,7 @@
                     localStorage.setItem('premiumActive', 'false');
                     elements.premiumBadge.style.display = "none";
                     elements.buyPremiumBtn.textContent = translations[gameState.currentLanguage]['buyPremium'];
-                    elements.buyPremiumBtn.style.background = "var(--primary-color)";
-                    elements.buyPremiumBtn.style.color = "white";
+                    elements.buyPremiumBtn.classList.remove('premium-btn');
                     elements.timeLeft.style.display = "none";
                     gameState.clicksLeft = gameState.MAX_CLICKS;
                     updateClicksCounter();
@@ -1309,6 +1482,71 @@
             }
         }
 
+        // Проверка заданий
+        function checkQuests() {
+            // Проверяем задание на клики
+            if (gameState.totalClicks >= 100 && !gameState.completedQuests.includes('click_quest')) {
+                completeQuest('click_quest', 200);
+            }
+            
+            // Обновляем статус заданий
+            updateQuestStatus();
+        }
+
+        function completeQuest(questId, reward) {
+            gameState.completedQuests.push(questId);
+            gameState.coins += reward;
+            updateBalance();
+            localStorage.setItem('completedQuests', JSON.stringify(gameState.completedQuests));
+            showToast(`${translations[gameState.currentLanguage]['questCompleted']}${reward} $INSOMNIA`);
+            updateQuestStatus();
+        }
+
+        function updateQuestStatus() {
+            // Telegram quest
+            if (gameState.completedQuests.includes('telegram_quest')) {
+                elements.telegramQuest.classList.add('quest-completed');
+            }
+            
+            // Click quest
+            if (gameState.completedQuests.includes('click_quest')) {
+                elements.clickQuest.classList.add('quest-completed');
+            }
+            
+            // Premium quest
+            if (gameState.completedQuests.includes('premium_quest')) {
+                elements.premiumQuest.classList.add('quest-completed');
+            }
+        }
+
+        function checkPremiumQuest() {
+            if (gameState.premiumActive && !gameState.completedQuests.includes('premium_quest')) {
+                completeQuest('premium_quest', 1000);
+            }
+        }
+
+        // Проверка платежа (имитация)
+        function checkPaymentStatus() {
+            // В реальном приложении здесь будет запрос к серверу для проверки платежа
+            if (gameState.paymentStatus === 'completed') {
+                showToast(translations[gameState.currentLanguage]['paymentSuccess']);
+                const endDate = new Date();
+                endDate.setDate(endDate.getDate() + 7);
+                gameState.premiumEndDate = endDate.toISOString();
+                localStorage.setItem('premiumEndDate', gameState.premiumEndDate);
+                activatePremium();
+                startTimer();
+                elements.premiumModal.style.display = 'none';
+                elements.cryptoPayment.style.display = 'none';
+                elements.cardPayment.style.display = 'none';
+                elements.paymentOptions.style.display = 'block';
+            } else if (gameState.paymentStatus === 'pending') {
+                showToast(translations[gameState.currentLanguage]['paymentPending']);
+            } else {
+                showToast(translations[gameState.currentLanguage]['paymentFailed']);
+            }
+        }
+
         // Сброс прогресса
         function resetProgress() {
             if (confirm(translations[gameState.currentLanguage]['resetConfirm'])) {
@@ -1343,6 +1581,9 @@
                 gameState.refEarned = 0;
                 gameState.clicksLeft = gameState.MAX_CLICKS;
                 gameState.regenStartTime = Date.now();
+                gameState.totalClicks = 0;
+                gameState.completedQuests = [];
+                gameState.paymentStatus = 'not_started';
                 
                 // Восстанавливаем премиум статус
                 gameState.premiumActive = premiumData.active;
@@ -1358,14 +1599,14 @@
                 elements.refCount.textContent = gameState.refCount;
                 elements.refEarned.textContent = gameState.refEarned;
                 updateClicksCounter();
+                updateQuestStatus();
                 
                 if (gameState.premiumActive) {
                     activatePremium();
                 } else {
                     elements.premiumBadge.style.display = "none";
                     elements.buyPremiumBtn.textContent = translations[gameState.currentLanguage]['buyPremium'];
-                    elements.buyPremiumBtn.style.background = "var(--primary-color)";
-                    elements.buyPremiumBtn.style.color = "white";
+                    elements.buyPremiumBtn.classList.remove('premium-btn');
                     elements.timeLeft.style.display = "none";
                     startClickRefresh();
                 }
@@ -1406,6 +1647,7 @@
             updateClicksCounter();
             checkPremiumStatus();
             startClickRefresh();
+            checkQuests();
             
             // Применяем выбранный язык
             translatePage(gameState.currentLanguage);
@@ -1432,6 +1674,8 @@
                         // Задержка перед обработкой клика
                         setTimeout(() => {
                             gameState.clicksLeft--;
+                            gameState.totalClicks++;
+                            localStorage.setItem('totalClicks', gameState.totalClicks);
                             updateClicksCounter();
                             
                             if (gameState.clicksLeft <= 0) {
@@ -1445,11 +1689,18 @@
                             gameState.coins += gameState.clickPower;
                             createCoinEffect(e.clientX, e.clientY, gameState.clickPower);
                             updateBalance();
+                            
+                            // Проверяем задание на клики
+                            if (gameState.totalClicks >= 100 && !gameState.completedQuests.includes('click_quest')) {
+                                completeQuest('click_quest', 200);
+                            }
                         }, gameState.CLICK_DELAY);
                     } else {
                         // Для премиум-пользователей без задержки
                         animateClick();
                         gameState.coins += gameState.clickPower;
+                        gameState.totalClicks++;
+                        localStorage.setItem('totalClicks', gameState.totalClicks);
                         createCoinEffect(e.clientX, e.clientY, gameState.clickPower);
                         updateBalance();
                     }
@@ -1472,6 +1723,9 @@
 
             elements.closePremiumModal.addEventListener('click', () => {
                 elements.premiumModal.style.display = 'none';
+                elements.cryptoPayment.style.display = 'none';
+                elements.cardPayment.style.display = 'none';
+                elements.paymentOptions.style.display = 'block';
             });
 
             // Выбор цвета (только для премиум)
@@ -1506,22 +1760,40 @@
                 });
             });
 
-            // Покупка премиума (имитация)
-            elements.confirmPremium.addEventListener('click', () => {
-                // В реальном приложении здесь будет проверка платежа
-                const endDate = new Date();
-                endDate.setDate(endDate.getDate() + 7);
-                gameState.premiumEndDate = endDate.toISOString();
-                localStorage.setItem('premiumEndDate', gameState.premiumEndDate);
+            // Оплата криптовалютой
+            elements.payCrypto.addEventListener('click', () => {
+                elements.paymentOptions.style.display = 'none';
+                elements.cryptoPayment.style.display = 'block';
+                elements.cardPayment.style.display = 'none';
                 
-                activatePremium();
-                elements.premiumModal.style.display = 'none';
-                showToast(translations[gameState.currentLanguage]['premiumActivated7Days']);
+                // В реальном приложении здесь будет генерация уникального адреса для пользователя
+                elements.cryptoAddress.textContent = 'UQA6AB1e1jlNtn9SzVyNThIjJqBhnUz_O5dZcMNHTDV2L6US';
+            });
+
+            // Оплата картой
+            elements.payCard.addEventListener('click', () => {
+                elements.paymentOptions.style.display = 'none';
+                elements.cryptoPayment.style.display = 'none';
+                elements.cardPayment.style.display = 'block';
                 
-                // Восстанавливаем клики
-                gameState.clicksLeft = Infinity;
-                updateClicksCounter();
-                startTimer();
+                // В реальном приложении здесь будет загрузка платежного шлюза
+                elements.paymentFrame.src = 'about:blank';
+                showToast('Платежный шлюз загружается...');
+                
+                // Имитация загрузки платежного шлюза
+                setTimeout(() => {
+                    showToast('Платежный шлюз готов к оплате');
+                    // В реальном приложении здесь будет iframe с платежной формой
+                }, 1500);
+            });
+
+            // Проверка оплаты
+            elements.checkPayment.addEventListener('click', () => {
+                // В реальном приложении здесь будет запрос к серверу для проверки платежа
+                // Для демонстрации имитируем успешную оплату
+                gameState.paymentStatus = 'completed';
+                localStorage.setItem('paymentStatus', gameState.paymentStatus);
+                checkPaymentStatus();
             });
 
             // Подключение кошельков
@@ -1629,6 +1901,17 @@
             elements.supportBtn.addEventListener('click', () => {
                 window.open('https://t.me/vigorous_north', '_blank');
                 elements.settingsMenu.classList.remove('active');
+            });
+
+            // Задание на подписку Telegram
+            elements.telegramQuest.addEventListener('click', () => {
+                if (!gameState.completedQuests.includes('telegram_quest')) {
+                    window.open('https://t.me/+WTwhgx9lxdU4NDRi', '_blank');
+                    // В реальном приложении здесь будет проверка подписки через Telegram бота
+                    // Для демонстрации сразу зачисляем награду
+                    completeQuest('telegram_quest', 500);
+                    showToast(translations[gameState.currentLanguage]['telegramSubscribed']);
+                }
             });
 
             // Сброс прогресса
